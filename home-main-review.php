@@ -11,7 +11,7 @@
 						    if ( get_query_var('paged') ) { $paged = get_query_var('paged'); } else if ( get_query_var('page') ) {$paged = get_query_var('page'); } else {$paged = 1; }
 						    $temp = $wp_query;  
 						    $wp_query = null; 
-						    $args = array( 'post_type' => 'post', 'post_status'=>'publish' ,'orderby'=>'date', 'order'=>'DESC', 'paged' => $paged,'cat' => -$catId);
+						    $args = array( 'post_type' => 'post', 'post_status'=>'publish' ,'orderby'=>'date', 'order'=>'DESC', 'paged' => $paged,'cat' => $catId);
 						    $wp_query = new WP_Query();
 						    $wp_query->query( $args );
 
