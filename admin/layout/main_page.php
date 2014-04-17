@@ -7,13 +7,17 @@
 			<div class="logo ">
 				<h2>
 
-				<img class="theme_options_logo" src="<?php echo get_stylesheet_directory_uri() . "/admin/layout/img/logo.png"; ?>" alt="<?php echo cwp_config('admin_page_header'); ?>"> 
+				<img class="theme_options_logo" src="<?php echo get_stylesheet_directory_uri() . "/admin/layout/img/logo-themeisle.png"; ?>" alt="<?php echo cwp_config('admin_page_header'); ?>"> 
 				
-				<button class="button"><a href="http://www.readythemes.com/reviewgine-lite-tutorial/?r=wporg" class="read_docs" style="text-decoration: none;"><?php _e("Read online documentation", "cwp"); ?></a></button>
+				<!--<button class="button"><a href="http://www.readythemes.com/reviewgine-lite-tutorial/?r=wporg" class="read_docs" style="text-decoration: none;"><?php _e("Read online documentation", "cwp"); ?></a></button>-->
 				
-				<button class="button"><a href="http://www.readythemes.com/reviewgine-pro/?r=wporg"  class="read_docs" style="color:red; text-decoration: none; "><?php _e("Buy PRO Version", "cwp"); ?></a></button>
+				<button class="button"><a href="http://www.readythemes.com/reviewgine-pro/?r=wporg"  class="read_docs" style="color:red; text-decoration: none; " target="_blank"><?php _e("Buy PRO Version", "cwp"); ?></a></button>
 				
-				<button class="button"><a href="http://codecanyon.net/search?utf8=%E2%9C%93&site=codecanyon.net&category=wordpress&term=affiliate&ref=maldinii" class="read_docs" style="text-decoration: none;"><?php _e("Recommended Plugins", "cwp"); ?></a></button>
+				<button class="button"><a href="http://themeisle.com/contact/" class="read_docs" style="text-decoration: none;" target="_blank"><?php _e("Contact us", "cwp"); ?></a></button>
+				
+				<button class="button"><a href="http://themeisle.com/about-us/" class="read_docs" style="text-decoration: none;" target="_blank"><?php _e("About us", "cwp"); ?></a></button>
+				
+				<!--<button class="button"><a href="http://codecanyon.net/search?utf8=%E2%9C%93&site=codecanyon.net&category=wordpress&term=affiliate&ref=maldinii" class="read_docs" style="text-decoration: none;"><?php _e("Recommended Plugins", "cwp"); ?></a></button>-->
 				
 				</h2>
 			</div>
