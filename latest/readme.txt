@@ -1,5 +1,5 @@
 === Reviewgine Affiliate ===
-Contributors:		ReadyThemes, Codeinwp
+Contributors:		codeinwp
 Tags:				white, light, right-sidebar, two-columns, fixed-width, custom-menu, theme-options, featured-images, right-sidebar 
 Requires at least:	3.3.0
 Tested up to:		3.8
