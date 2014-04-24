@@ -43,11 +43,11 @@
 			<div class="container">
 				<div class="left"><?php echo cwp("cwp_footer_message"); ?></div>
 				<div class="right">
-					<a href="http://themeisle.com/themes/reviewgine/?utm_source=numetema&utm_medium=link&utm_campaign=themefooter" title="Reviewgine Theme" rel="nofollow" target="_blank">
-						Reviewgine</a>
-					<?php _e(" powered by ",'cwp');?> <a href="http://wordpress.org/" title="WordPress" target="_blank">
-						WordPress</a>
-				</div>
+			<a href="http://www.readythemes.com/reviewgine-lite/?r=footer" title="Reviewgine Theme" rel="nofollow">
+				Reviewgine Theme</a>
+			<?php _e("powered by",'cwp');?> <a href="http://wordpress.org/" title="WordPress">
+				WordPress</a>
+		</div>
 			</div><!-- end .container -->
 		</div><!-- end #lower-footer -->
 	</div><!-- end .wrapper -->
