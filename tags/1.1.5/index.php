@@ -1,23 +1,11 @@
-<?php get_template_part("main-page-featured-boxes"); ?>
-			<div class="container">
-				<section id="content-wrapper">
-					<div class="latest-wide-article">
-					</div><!-- end .latest-wide-article -->
-						
-						<?php
-							$featured_category = cwp('cwp_site_categories2');
-							$catId = get_cat_ID($featured_category);
-							
-						    if ( get_query_var('paged') ) { $paged = get_query_var('paged'); } else if ( get_query_var('page') ) {$paged = get_query_var('page'); } else {$paged = 1; }
-						    $temp = $wp_query;  
-						    $wp_query = null; 
-						    $args = array( 'post_type' => 'post', 'post_status'=>'publish' ,'orderby'=>'date', 'order'=>'DESC', 'paged' => $paged, 'category__not_in' => array($catId));
-						    $wp_query = new WP_Query();
-						    $wp_query->query( $args );
+<?php get_header(); ?>
+<div id="main-content">
+			<div class="container search-results">
+				<section id="content-wrapper" class="page">
 
-						    while ($wp_query->have_posts()) : $wp_query->the_post(); 
-						?>
-
+					<div id="post-area" class="hfeed">
+					<?php if(have_posts()) { while ( have_posts() ) : the_post() ?>
+                    <?php global $post; $post_featured_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
 					<div <?php post_class("latest-small-article"); ?>>
 						<div class="ls-article-inner">
 							<div class="ls-image">
@@ -54,16 +42,27 @@
 						}
 						?>
 					</div><!-- end .latest-small-article -->
-
-						<?php endwhile; ?>
+						<?php endwhile; } else {
+							_e("<h1 class='no-results-found'>No results found!</h1>", 'cwp');
+						}
+						 ?>
+					</div><!-- end #post-area -->
 						<div class="clearfix"></div>
-						<nav>
-						   <?php cwp_paginate(); 
-						   $wp_query = null;
-						   $wp_query = $temp; // Reset ?>
-						</nav>
+
+							<?php global $wp_query;  
+	  						if ( $wp_query->max_num_pages > 1 ) : ?>
+						<div class="pagination clearfix">
+							<div class="pag-left">
+								<?php previous_posts_link(__('Newer Posts','cwp'), 0); ?>
+							</div><!-- end .pag-left -->
+							<div class="pag-right">
+								<?php next_posts_link(__('Older Posts','cwp'), 0); ?>
+							</div><!-- end .pag-right -->
+						</div><!-- end .pagination -->
+						<?php endif; ?>
 				</section><!-- end #content-wrapper-->
+
 				<?php get_sidebar(); ?>
 			</div> <!-- end .container -->
-			<?php get_template_part('inc/cwp_carousel'); ?>
 		</div><!-- end #main-content -->
+<?php get_footer(); ?>
