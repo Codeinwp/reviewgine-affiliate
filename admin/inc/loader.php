@@ -7,7 +7,9 @@ add_action( 'admin_menu', 'cwp_options_add_page' );
 function cwp_options_add_page() { 
 	
 	$render = new cwpRenderView();
-	add_theme_page( __( cwp_config("admin_page_title"), 'cwp' ), __( cwp_config("admin_page_menu_name"), 'cwp' ), 'edit_theme_options', cwp_config("menu_slug"), array($render,'show'), "" ,61 );
+	add_theme_page( __( cwp_config("admin_page_title"), 'cwp' ), __( cwp_config("admin_page_menu_name"), 'cwp' ), 'edit_theme_options', cwp_config("menu_slug"), array($render,'show') );
+	 
+	
 }
  
 function cwp_config($config_name, $echo = 0){
@@ -19,16 +21,18 @@ function cwp_config($config_name, $echo = 0){
 				echo $return;
 			else
 				return $return;
-}
-
+	
+} 
 function cwp_get_options(){
 	$error = cwp_check_config(); 
 	if(!empty($error)) return false;
 	$options = get_option(cwp_config("menu_slug"));
-	$default = cwpConfig::$structure;	
+	$default = cwpConfig::$structure;
+	
 }
-
-function cwp_check_element($field,$tab){ 
+function cwp_check_element($field,$tab){
+ 
+ 
 			$errors = array();
 			$group_fields = array("type","name","options");
 			$input_text = array("type","name","description","id","default");
@@ -60,16 +64,6 @@ function cwp_check_element($field,$tab){
 			
 									break;
 									case 'textarea': 
-										
-										$keys = array_keys($field);
-										$dif = array_diff($input_text,$keys);
-										if(!empty($dif)){
-										$errors[] = "You have not added the ".implode(",",$dif)." keys for the ".$tab."   tab on .: ".$field['name'];
-											break;
-										} 
-			
-									break;
-									case 'textarea_html': 
 										
 										$keys = array_keys($field);
 										$dif = array_diff($input_text,$keys);
@@ -244,25 +238,15 @@ function cwp_check_element($field,$tab){
 								} 
 					return $errors;
 }
-
-function isJson($string) {
- json_decode($string);
- return (json_last_error() == JSON_ERROR_NONE);
-}
-
 function cwp_check_config(){
 	$errors = array();
 	$config = cwpConfig::$structure;
-
 	$tab_fields  = array("type","name","options");
 	$titles = array("name","type");
 	$title = array_merge($titles,array("default"));
 	foreach($config as $k=>$fields){
-
-
 					 $keys = array_keys($fields);
 					 $dif = array_diff($tab_fields,$keys);
-
 					 if(!empty($dif)){
 						$errors[] = "You have not added the ".implode(",",$dif)." keys for first level item on key : ". $k;
 						break;
@@ -313,11 +297,9 @@ function cwp_check_config(){
 					}
 					if(!empty($errors)) break;
 						
-} 
-
+	}
 	return $errors;
 } 
-
 function cwp_get_config_defaults($structure){
 	$defaults = array();
 	foreach($structure as $k=>$fields){
@@ -346,29 +328,22 @@ function cwp_get_config_defaults($structure){
 	} 
 	return $defaults;
 }
-
 function cwp_admin_notice() {
-
 	$errors = cwp_check_config(); 
 	if(!empty($errors)) { 
 		foreach($errors as $error){ 
 	?>
 		<div id="message" class="error"> <p><strong><?php echo $error; ?></strong></p></div>
 
-    <?php 
+    <?php
 		}
 	}
 }
 
-function cwp_check_options(){
-
-		$option = get_option(cwp_config("menu_slug"));
-		if($option === false) cwp_add_options();
-}
-
 function cwp_add_options(){
-/*		 	$errors = cwp_check_config();
-			if(!empty($errors)) return false; */
+ 
+		$errors = cwp_check_config();
+		if(!empty($errors)) return false; 
 		$validator = new cwpOptionsValidator();
 		$option = get_option(cwp_config("menu_slug"));
 		$structure = cwpConfig::$structure;
@@ -380,24 +355,24 @@ function cwp_add_options(){
 			add_option(cwp_config("menu_slug"),$options,"","no");
 		else
 			update_option(cwp_config("menu_slug"),$options);
-		if(function_exists("register_setting"))
-			register_setting( cwp_config("menu_slug"), cwp_config("menu_slug"),  array($validator,"validate")  );
-	
+		
+		register_setting( cwp_config("menu_slug"), cwp_config("menu_slug"),  array($validator,"validate")  );
 }
+add_action("admin_init","cwp_add_options");
+add_action( 'admin_notices', 'cwp_admin_notice' );
+add_action('wp_ajax_cwp_load_defaults', 'cwp_load_defaults_callback');
 
 function cwp_load_defaults_callback() {
+	
+
 		$errors = cwp_check_config();
 		if(!empty($errors)) return false; 
-		delete_option(cwp_config("menu_slug"));
+		  
 		$validator = new cwpOptionsValidator();
-		$structure = cwpConfig::$structure;
-		$defaults = cwp_get_config_defaults($structure);
-		$defaults = $validator->validate_defaults();	print_r($defaults);
-		add_option(cwp_config("menu_slug"),$defaults,"","no");
-		
+		$defaults = $validator->validate_defaults();
+		update_option(cwp_config("menu_slug"),$defaults);
 		die();
 }
-
 function cwp($name = ''){
 	$op = get_option(cwp_config("menu_slug")); 
 	if(empty($name))
@@ -409,13 +384,7 @@ function cwp($name = ''){
 	return null;
 }
 
-
-
-		add_action("admin_init","cwp_add_options");
-		add_action("init","cwp_check_options");
-		add_action("admin_notices", "cwp_admin_notice");
-		add_action("wp_ajax_cwp_load_defaults", "cwp_load_defaults_callback");
-
-
-
-
+add_action( 'admin_enqueue_scripts', 'cwp_top_custom_wp_admin_script'); 
+function cwp_top_custom_wp_admin_script(){
+	 wp_enqueue_media();
+}
