@@ -586,3 +586,12 @@ h1.no-results-found { font-size: 20px; font-weight: bold; color:#737373; text-al
 .main-menu ul li ul {
 	display:none;
 }
+
+.logo a {
+	text-decoration:none;
+}
+.logo h2{
+
+	color:#fff;
+	
+}

@@ -12,9 +12,7 @@
 				<a href="http://www.readythemes.com/reviewgine-lite-tutorial/?r=wporg" class="read_docs button" target="_blank" style="text-decoration: none;"><?php _e("Read online documentation", "cwp"); ?></a>
 				
 				<a href="http://www.readythemes.com/reviewgine-pro/?r=wporg"  class="read_docs button" target="_blank" style="color:red; text-decoration: none; "><?php _e("Buy PRO Version", "cwp"); ?></a>
-				
-				<a href="http://codecanyon.net/search?utf8=%E2%9C%93&site=codecanyon.net&category=wordpress&term=affiliate&ref=maldinii" target="_blank" class="read_docs button" style="text-decoration: none;"><?php _e("Recommended Plugins", "cwp"); ?></a>
-
+				 
 				</h2>
 			</div>
 		  

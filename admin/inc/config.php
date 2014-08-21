@@ -222,49 +222,7 @@
 
 												)
 						),
-						array(
-							"type"=>"tab",
-							"name"=>"Advertise Settings",
-							"options"=>array(
-								array(									
-									"type"=>"radio",
-									"name"=>"Header 468 x 60 Banner",
-									"description"=>"Would you like to display the header banner?",
-									"id"=>self::$shortname . "_header_banner_bool",
-									"options"=>array(
-										"yes"=>"Yes",
-										"no"=>"No",
-									),
-									"default"=>"yes"
-								),
-
-								array(
-									
-									"type"=>"image",
-									"name"=>"Header Banner Image",
-									"description"=>"Upload the image you want to be displayed in the header's ad spot. Required size: 468px x 60px.",
-									"id"=>self::$shortname . "_banner_image",
-									"default"=> get_stylesheet_directory_uri() . "/images/main-header-ad.jpg" 
-								),
-
-								array(
-								 "type"=>"input_text",
-								 "name"=>"Header Banner Alternative",							 
-								 "description"=>"Short description, this will improve SEO and User Accesibility.",
-								 "id"=>self::$shortname . "_header_banner_alt",
-								 "default"=>"http://"
-							   ),
-
-								array(
-								 "type"=>"input_text",
-								 "name"=>"Header Banner Link",							 
-								 "description"=>"Specify the banner's URL",
-								 "id"=>self::$shortname . "_header_banner_url",
-								 "default"=>"http://"
-							   )
-							)
-						),
-
+					
 						array(
 							"type"=>"tab",
 							"name"=>"Integration",

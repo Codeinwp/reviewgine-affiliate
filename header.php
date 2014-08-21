@@ -41,7 +41,13 @@
 			<div class="main-header">
 				<div class="main-header-inner container">
 					<div class="logo">	
-						<a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php cwp_get_logo(); ?>" alt="<?php bloginfo('name') ?> | <?php bloginfo('description'); ?>" /></a>
+						<a href="<?php echo esc_url(home_url('/')); ?>">
+						<?php if(cwp_get_logo() != "" ) : ?>
+						<img src="<?php cwp_get_logo(); ?>" alt="<?php bloginfo('name') ?> | <?php bloginfo('description'); ?>" />
+						<?php else: ?>
+						<h2><?php  bloginfo('name') ?></h2>
+						<?php endif; ?>
+						</a>
 					</div><!-- end .logo -->
 
 					<div id="advertisment">
