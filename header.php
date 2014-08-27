@@ -40,15 +40,15 @@
 			</div><!-- end .top-bar -->
 			<div class="main-header">
 				<div class="main-header-inner container">
-					<div class="logo">	
-						<a href="<?php echo esc_url(home_url('/')); ?>">
-						<?php if(cwp_get_logo() != "" ) : ?>
-						<img src="<?php cwp_get_logo(); ?>" alt="<?php bloginfo('name') ?> | <?php bloginfo('description'); ?>" />
-						<?php else: ?>
-						<h2><?php  bloginfo('name') ?></h2>
-						<?php endif; ?>
-						</a>
-					</div><!-- end .logo -->
+					<div class="logo">
+                        <a href="<?php echo esc_url(home_url('/')); ?>">
+                        <?php if(cwp_get_logo() != "" ) : ?>
+                        <img src="<?php echo cwp_get_logo(); ?>" alt="<?php bloginfo('name') ?> | <?php bloginfo('description'); ?>" />
+                        <?php else: ?>
+                        <h2><?php  bloginfo('name') ?></h2>
+                        <?php endif; ?>
+                        </a>
+                    </div><!-- end .logo -->
 
 					<div id="advertisment">
 						<?php cwp_get_ad_banner(); ?>

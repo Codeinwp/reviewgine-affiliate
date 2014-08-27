@@ -240,6 +240,7 @@ function cwp_check_element($field,$tab){
 }
 function cwp_check_config(){
 	$errors = array();
+	$config = cwpConfig::init();
 	$config = cwpConfig::$structure;
 	$tab_fields  = array("type","name","options");
 	$titles = array("name","type");
