@@ -13,7 +13,8 @@
 			$this->add_css("main_page_css",$css_path."main_page.css"); 
 			$this->add_js("main_page_js",$js_path."admin.js");
 			$this->add_js("typsy",$js_path."tipsy.js");
-			$this->add_js("jquery" ); 
+			$this->add_js("jquery" );
+			$this->add_js("media" );
 			 
 			$this->options =  get_option(cwp_config("menu_slug"));
 			$this->add_js('wp-color-picker' );
@@ -31,11 +32,6 @@
 										$this->add_input_text($tabid,esc_html($field['name']),esc_html($field["description"]),esc_attr($field['id']));
 			
 									break;
-									case 'input_text_disabled': 
-										 
-										$this->add_input_text_disabled($tabid,esc_html($field['name']),esc_html($field["description"]),esc_attr($field['id']));
-			
-									break;
 									case 'input_number': 
 										 
 										$this->add_input_number($tabid,esc_html($field['name']),esc_html($field["description"]),esc_attr($field['id']));
@@ -46,9 +42,11 @@
 										$this->add_textarea($tabid,esc_html($field['name']),esc_html($field["description"]),esc_attr($field['id']));
 			
 									break;
-									case 'textarea_disabled': 
-										 
-										$this->add_textarea_disabled($tabid,esc_html($field['name']),esc_html($field["description"]),esc_attr($field['id']));
+									case 'textarea_html': 
+										 if(current_user_can("unfiltered_html"))
+											$this->add_textarea($tabid,esc_html($field['name']),esc_html($field["description"]),esc_attr($field['id']));
+										else 
+											$this->add_restriction($tabid,esc_html($field['name']));	
 			
 									break;
 									case 'editor': 
@@ -116,7 +114,7 @@
 									
 									
 								}
-					
+					if(isset($errors)) { return $errors; }
 		}
 		public  function show(){ 
 			$structure = cwpConfig::$structure;
@@ -164,7 +162,7 @@
 			$this->js[] = $name;
 			
 		}
-		 
+		
 		public function render_view($name){
 			$this->data["tabs"] = $this->tabs;
 			foreach($this->data as $k=>$v){
@@ -173,10 +171,12 @@
 			foreach($this->css as $file){
 				 wp_enqueue_style($file);
 			}
-			foreach($this->js as $file){ 
-					 
-					wp_enqueue_script($file) ;
-				 
+			foreach($this->js as $file){
+				if($file == "media"){
+					
+						wp_enqueue_media(); 
+				}
+				 wp_enqueue_script($file) ;
 			}
 			include(locate_template("admin/layout/".$name.".php")); 
 		} 
@@ -195,17 +195,6 @@
 			$html = '
 				<div class="controls '.$class.'">
 				<div class="explain">'.$name.'</div><p class="field_description">'.$description.'</p> <input class="cwp_input " placeholder="'.$name.'" name="'.cwp_config("menu_slug").'['.$id.']" type="text" value="'.$this->options[$id].'"></div>';
-			
-			$this->tabs[$tabid]["elements"][] = array("type"=>"input_text",
-				"html"=>$html
-			);
-			
-		}
-		
-		public function add_input_text_disabled($tabid,$name,$description,$id,$class=''){   
-			$html = '
-				<div class="controls '.$class.'field_disabled">
-				<div class="explain">'.$name.'</div><p class="field_description ">'.$description.'</p> <input disabled class="cwp_input " placeholder="'.$name.'" name="'.cwp_config("menu_slug").'['.$id.']" type="text" value="'.$this->options[$id].'"></div>';
 			
 			$this->tabs[$tabid]["elements"][] = array("type"=>"input_text",
 				"html"=>$html
@@ -373,13 +362,13 @@
 			);
 			
 		}
-		public function add_textarea_disabled($tabid,$name,$description,$id,$class=''){  
+		public function add_restriction($tabid,$name){  
  
 			$html = '
-				<div class="controls '.$class.' field_disabled">
-				<div class="explain">'.$name.'</div><p class="field_description">'.$description.'</p> <textarea disabled class="cwp_textarea " placeholder="'.$name.'" name="'.cwp_config("menu_slug").'['.$id.']"    >'.$this->options[$id].'</textarea></div>';
+				<div class="controls '.$class.'">
+				<div class="explain">'.$name.'</div><p class="field_description">You need to have the capability to add HTML in order to use this feature !</p></div>';
 			
-			$this->tabs[$tabid]["elements"][] = array("type"=>"textarea",
+			$this->tabs[$tabid]["elements"][] = array("type"=>"textarea_html",
 				"html"=>$html
 			);
 			

@@ -1,0 +1,327 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Reviewgine\n"
+"POT-Creation-Date: 2014-01-13 15:53+0200\n"
+"PO-Revision-Date: 2014-01-13 15:54+0200\n"
+"Last-Translator: \n"
+"Language-Team: ReadyThemes <info@readythemes.com>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: C:\\wordpress\\wp-content\\themes\\reviewgine-"
+"affiliate\n"
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/404.php:4
+msgid "404"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/404.php:5
+msgid "Error! Page not found!"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/404.php:6
+msgid ""
+"It looks like you may have taken a wrong turn, because there's nothing here."
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/comments.php:3
+msgid "This article is password protected"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/comments.php:7
+msgid "No Comments"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/comments.php:7
+msgid "One Comment"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/comments.php:7
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/single.php:23
+msgid "% Comments"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/comments.php:21
+msgid "Older Comments"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/comments.php:22
+msgid "Newer Comments"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/comments.php:29
+msgid "Comments are closed."
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/footer.php:16
+msgid "About Reviewgine"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/footer.php:17
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, ducimus, "
+"nisi, vitae, veritatis praesentium eos tempore autem ipsa veniam maxime "
+"voluptatibus sint mollitia nostrum fuga facere dolore error adipisci tempora."
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/footer.php:20
+msgid "Recent Posts"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/footer.php:24
+msgid "Recent Comments"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/footer.php:28
+msgid "Meta"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/functions.php:21
+msgid "Primary Header Menu"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/functions.php:26
+msgid "Top Bar Menu"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/functions.php:132
+msgid "said:"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/functions.php:140
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/functions.php:242
+msgid "Main Sidebar"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/functions.php:244
+msgid "This sidebar appeares on all templates."
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/functions.php:252
+msgid "Footer Sidebar"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/functions.php:254
+msgid "Drag here widgets that you would like to appear in the footer."
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/functions.php:310
+msgid "Default Title"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/functions.php:337
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/home-main-blog.php:30
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/home-main-review.php:31
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/index.php:17
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/search.php:21
+msgid "No featured image added."
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/home-main-blog.php:59
+msgid "Read More"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/index.php:37
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/search.php:41
+msgid "<h1 class='no-results-found'>No results found!</h1>"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/index.php:47
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/search.php:53
+msgid "Newer Posts"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/index.php:50
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/search.php:56
+msgid "Older Posts"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/main-page-featured-boxes.php:21
+msgid "Featured Titles"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/main-page-featured-boxes.php:35
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/main-page-featured-boxes.php:76
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/main-page-featured-boxes.php:118
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/main-page-featured-boxes.php:159
+msgid "No image."
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/main-page-featured-boxes.php:181
+msgid "Popular Categories"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/search.php:7
+msgid "Search results for:"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/searchform.php:2
+msgid "Search for something"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/single.php:23
+msgid "0 Comments"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/single.php:23
+msgid "1 Comment"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/single.php:39
+msgid "Next"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/single.php:40
+msgid "Previous"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/single.php:55
+msgid "About the Author"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/inc/render.php:211
+msgid "Normal"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/inc/render.php:212
+msgid "Italic"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/inc/render.php:213
+msgid "Bold"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/inc/render.php:214
+msgid "Bold Italic"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/inc/render.php:266
+msgid "No Repeat"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/inc/render.php:267
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/inc/render.php:268
+msgid "Repeat Vertically"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/inc/render.php:269
+msgid "Repeat All"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/inc/render.php:274
+msgid "Top Left"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/inc/render.php:275
+msgid "Top Center"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/inc/render.php:276
+msgid "Top Right"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/inc/render.php:277
+msgid "Middle Left"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/inc/render.php:278
+msgid "Middle Center"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/inc/render.php:279
+msgid "Middle Right"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/inc/render.php:280
+msgid "Bottom Left"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/inc/render.php:281
+msgid "Bottom Center"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/inc/render.php:282
+msgid "Bottom Right"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/inc/render.php:287
+msgid "Scroll Normally"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/inc/render.php:288
+msgid "Fixed in Place"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/layout/main_page.php:12
+msgid "Read online documentation"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/layout/main_page.php:14
+msgid "Buy PRO Version"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/layout/main_page.php:16
+msgid "Recommended Plugins"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/layout/main_page.php:30
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/layout/main_page.php:70
+msgid "Save All Changes"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/layout/main_page.php:33
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/admin/layout/main_page.php:73
+msgid "Options Reset"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/inc/cwp_popular_articles_widget.php:11
+msgid "CWP Popular Articles Widget"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/inc/cwp_popular_articles_widget.php:14
+msgid "This widget displays the most popular articles."
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/inc/cwp_popular_articles_widget.php:73
+msgid "Popular Articles"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/inc/cwp_popular_articles_widget.php:74
+msgid "10"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/inc/cwp_popular_articles_widget.php:75
+msgid "Select Category"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/inc/cwp_popular_articles_widget.php:86
+msgid "Title:"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/inc/cwp_popular_articles_widget.php:91
+msgid "Number of posts to show:"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/inc/cwp_popular_articles_widget.php:97
+msgid "Category:"
+msgstr ""
+
+#: C:\wordpress\wp-content\themes\reviewgine-affiliate/inc/cwp_popular_articles_widget.php:104
+msgid "There are no categories"
+msgstr ""
