@@ -43,7 +43,7 @@
 			<div class="container">
 				<div class="left"><?php echo cwp("cwp_footer_message"); ?></div>
 				<div class="right">
-			<a href="http://www.readythemes.com/reviewgine-lite/" title="Reviewgine Theme" rel="nofollow">
+			<a href="http://www.readythemes.com/reviewgine-lite/?r=footer" title="Reviewgine Theme" rel="nofollow">
 				Reviewgine Theme</a>
 			<?php _e("powered by",'cwp');?> <a href="http://wordpress.org/" title="WordPress">
 				WordPress</a>

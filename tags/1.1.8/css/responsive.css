@@ -1,0 +1,234 @@
+/* #Media Queries - Responsive Features
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {
+		#content-wrapper, #sidebar { width: 100% !important; }
+		.sidebar-widget .widget-container #wp-calendar tr td#today { border-radius: 0% !important; }
+	}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) { 
+
+		/* Featured Boxes - Templates: Home Main Blog Review, Home Main Review */
+		#main-page-featured { width: 768px !important; margin: 0 auto !important; margin-top: 20px !important; }
+		#featured-boxes { width: 768px !important; display: block !important; position: relative !important; margin: 0 auto !important; }
+		#featured-boxes header { width: 100% !important; border: 1px solid #ddd; border-bottom: none !important; }
+		#featured-boxes header h2 { width: 726px !important;  }
+
+		/* Review Categories */
+		#review-categories { width: 768px !important; margin: 0 auto !important; }	
+		#review-categories header { margin-top: 45px !important; }
+
+		/* Footer & Lower Footer */
+		#main-footer .footer-widget { width: 100% !important; margin-top: 20px !important;  }
+		#main-footer .footer-widget section h3 { text-align: center !important; font-size: 1.5em;  }
+		#lower-footer { text-align: center !important; }
+
+		/* Review Template */
+		.review-template .review-wu-left,.review-template .review-wu-right { width: 100% !important;  }
+		.review-template .review-wu-bars { border-right: none !important; float: left !important; width: 100% !important; }
+		.review-template .rev-wu-image, .review-template .review-wu-grade { width: 50% !important; border-bottom: none !important; border-top: 1px solid #ddd !important; }
+		.review-template .review-wu-grade { border-top: 1px solid #ddd !important; }
+		.review-template .review-wu-grade .percentage { margin: 0 auto !important; }
+
+
+		/* Main Menu */
+		 nav.main-menu li a { padding: 15px 10px !important; font-size: 15px !important; } 
+	}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) { 
+
+		/* Content */
+		#content-wrapper.page, #content-wrapper article { width: 100% !important; border-right: none !important; }
+		#main-article-carousel #carousel .c-item { width: 160px !important; }
+
+		/* Top Menu Bar */
+		.top-bar .top-bar-menu { width: 100% !important; margin-top: 20px;  }
+		.top-bar .top-bar-menu ul { text-indent: none !important; }
+		.top-bar .top-bar-menu ul li { display: block !important; width: 100%; text-align: center; float: none !important; margin: 0 !important; padding: 10px 0px; border-bottom: 1px dotted rgba(127, 140, 151, 0.5) !important; }
+		.top-bar .top-bar-menu ul li:first-child { border-top: 1px dotted rgba(127, 140, 151, 0.5) !important; }
+		.top-bar .top-bar-menu ul ul { text-indent: none !important; margin: 0 !important; }
+
+		/* Top Menu Social Icons */
+		.top-bar .top-bar-social { margin: 0 !important; float: none !important; width: 100% !important; text-align: center !important;}
+
+
+		/* Main Logo */
+		.main-header .logo { float: none !important; margin: 0 auto !important; padding-top: 30px !important; }
+		.main-header .logo img { width: 100% !important; }
+
+		/* Header Advertisment */
+		.main-header #advertisment { width: 100% !important; }
+		.main-header #advertisment img { width: 100% !important; }
+
+		/* Review Template */
+		.review-template .review-wu-bars { border-right: none !important; float: left !important; width: 100% !important; }
+		.review-template .review-wu-left,.review-template .review-wu-right { width: 100% !important;  }
+		.review-template .rev-wu-image, .review-template .review-wu-grade { width: 50% !important; border-bottom: none !important; border-top: 1px solid #ddd !important; }
+		.review-template .review-wu-grade .percentage { margin: 0 auto !important; }
+
+		/* Single Post / Review - Author Details */
+		#author-info .author-details { padding: 0 !important; }
+		#author-info img.avatar { position: relative !important; display: block !important; margin: 0 auto !important; margin-bottom: 20px !important; width: 200px !important; height: 200px !important;  }
+
+		/* Comment Section */
+		#comments-section .comment { padding-left: 15px !important; margin-top: 0 !important; }
+		#comments-section .comment .comment-author {   }
+		#comments-section .comment .avatar { position: relative !important; display: block !important;  width: 100px !important; height: 100px !important; margin: 0 auto !important; }
+		#comments-section .comment .avatar { display: block !important; margin: 0 auto !important; left: 0 !important; top: 0 !important; margin-top: 20px !important; }
+		#comments-section .comment-body .comment-reply { position: static !important; }
+		#comments-section .comment-body .comment-meta { float: left !important; margin-top: 10px !important; }
+		#comments-section .user-comments-grades { width: 100% !important; margin-bottom: 20px !important; }
+
+		/* Comment Form */
+		.comment-form-default, .comment-form-default input, .comment-form-meta-option  { width: 100% !important; }
+		.comment-form-meta-option { float: left !important; }
+
+		article #author-bio #author-info img { width: 100px !important; height: 100px !important; }
+
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+		/* Hide the Top Bar Navigation */
+		header .top-bar { display: none !important; }
+
+		/* Main Page Featured Articles */
+		#main-page-featured { width: 420px !important; margin: 0 auto !important; margin-top: 20px !important; }
+		#featured-boxes { width: 420px !important; display: block !important; position: relative !important; margin: 0 auto !important; }
+		#featured-boxes .featured-big, #featured-boxes .featured-small-container, #featured-boxes .featured-wide-container, #featured-boxes .featured-small, #featured-boxes .featured-wide { width: 100% !important; }
+		#featured-boxes header { width: 100% !important; border: 1px solid #ddd; border-bottom: none !important; }
+		#featured-boxes header h2 { width: 378px !important;  }
+
+		/* Review Categories */
+		#review-categories { width: 420px !important; margin: 0 auto !important; }	
+		#review-categories header { margin-top: 45px !important; }
+		#review-categories { margin-top: 526px !important;}
+		#main-page-featured { position: relative !important; display: block !important;  height: 100% !important; }
+
+		/* Footer and Lower Footer */
+		#main-footer .footer-widget { width: 100% !important; margin-top: 20px !important;  }
+		#main-footer .footer-widget section h3 { text-align: center !important; font-size: 1.5em;  }
+		#lower-footer { text-align: center !important; }
+
+		/* Content */
+		#content-wrapper .latest-small-article { width: 100% !important; border-right: none !important; }
+
+		/* Article Images and Captions */
+		#main-content article img { width: 100% !important; height: auto !important; }
+		#main-content article dl.wp-caption, #main-content article .wp-caption, #main-content #player { width: 100% !important; }
+		#main-content #content-wrapper.page .featured-image { width: 100% !important; }
+
+		header .main-header .main-menu ul { display: none !important; }
+		header .main-header .main-menu .main-dropdown { display: block !important; width: 96% !important; margin: 5px 2%;  padding: 9px !important; font-weight: bold !important; }
+		header .main-header .main-menu .main-dropdown option {  font-family: "Lato" !important;  }
+		header .main-header .main-menu .main-dropdown p { display: block !important; float: left !important; }
+
+		#review-categories { display: none !important; }
+		#main-page-featured #featured-boxes { max-height: 100% !important; }
+
+		#comments-section .comment .avatar { margin-bottom: 10px !important; }
+
+		#main-page-featured .featured-big canvas, #main-page-featured .featured-big span  { width: 70px !important; height: 70px !important; font-size: 21px !important;line-height: 3.4 !important;}
+		#main-page-featured .featured-big .percentage { top: -1px !important; left: -1px !important;  width: 70px !important; height: 70px !important;}
+		#main-page-featured .featured-big .chart { border: 3px solid #fff !important; width: 74px; height: 74px !important;}
+
+		#main-page-featured .featured-small canvas, #main-page-featured .featured-small span  { width: 40px !important; height: 40px !important; line-height: 2.3 !important;}
+		#main-page-featured .featured-small .percentage { top: -1px !important; left: -1px !important;  width: 40px !important; height: 40px !important;}
+		#main-page-featured .featured-small .chart { border: 3px solid #fff !important; width: 44px !important; height: 44px !important;}
+
+		#main-page-featured .featured-wide canvas, #main-page-featured .featured-wide span  { width: 40px !important; height: 40px !important; line-height: 2.3 !important; }
+		#main-page-featured .featured-wide .percentage { top: -1px !important; left: -1px !important;  width: 40px !important; height: 40px !important;}
+		#main-page-featured .featured-wide .chart { border: 3px solid #fff !important; width: 44px !important; height: 44px !important;}
+
+		.cwp-popular-review .chart canvas, .cwp-popular-review .chart span  { width: 40px !important; height: 40px !important; line-height: 2.3 !important; }
+		.cwp-popular-review .chart .percentage { top: -1px !important; left: -1px !important; width: 40px !important; height: 40px !important;}
+		.cwp-popular-review .chart { border: 3px solid #fff !important; width: 44px !important; height: 44px !important; top: 50% !important; margin-top: -22px !important; }
+
+		.ls-article-inner .ls-date { float: left !important; margin-top: 5px !important; font-size: 12px !important; margin-bottom: 5px !important; }
+		.ls-article-inner .ls-author { float: left !important; margin-top: 5px !important; font-size: 12px !important; }
+		.latest-small-article { height: 100% !important; padding-bottom: 20px !important; }
+
+		#comments-section .comment .wp-smiley { width: 15px !important; height: 15px !important;  }
+	}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+
+		/* Hide the Top Bar Navigation */
+		header .top-bar { display: none !important; }
+
+		/* Featured Templates */
+		#main-page-featured { width: 300px !important; margin: 0 auto !important; }
+		#featured-boxes { width: 300px !important; display: block !important; position: relative !important; margin: 0 auto !important; margin-top: 20px !important; }
+		#featured-boxes .featured-big, #featured-boxes .featured-small-container, #featured-boxes .featured-wide-container, #featured-boxes .featured-small, #featured-boxes .featured-wide { width: 100% !important; }
+		#featured-boxes header { width: 100% !important; border: 1px solid #ddd; border-bottom: none !important; }
+		#featured-boxes header h2 { width: 258px !important;  }
+
+		/* Review Categories */
+		#review-categories { width: 300px !important; margin: 0 auto !important; clear:both !important;}	
+		#review-categories header { margin-top: 45px !important; }
+		#review-categories { margin-top: 526px !important;}
+		#main-page-featured { position: relative !important; display: block !important;  height: 100% !important; }
+
+		/* Footer & Lower Footer */
+		#main-footer .footer-widget { width: 100% !important; margin-top: 20px !important;  }
+		#main-footer .footer-widget section h3 { text-align: center !important; font-size: 1.5em;  }
+		#lower-footer { text-align: center !important; }
+
+		/* Post */
+		#post-area article h1.entry-title { line-height: 0.8 !important; font-size: 2.8em; margin-bottom: 30px !important; }
+		#post-area article .entry-meta li:first-child { border-top: 1px dashed #ddd !important; padding-top: 10px !important; }
+		#post-area article .entry-meta li { display: block !important; width: 100% !important; border-bottom: 1px dashed #ddd !important; padding-bottom: 10px !important; line-height: 1; }
+		#post-area article .entry-meta li p { text-align: center; font-size: 1.1em !important; } 
+		#post-area article .entry-meta li i { text-align: left !important; float: left !important; }
+		#post-area article a.post-link { display: block !important;  text-align: center !important; margin-top: 30px !important;  }
+		#post-area article a.post-link button { padding: 15px 35px !important; font-weight: bold !important;  }
+        #main-content #content-wrapper.page .featured-image, .art-content table,#main-content article img { width: 100% !important; }
+		.article-section .sec-top h2 { font-size: 1.3em !important; }
+
+		/* Review Template */
+		.review-template .rev-wu-image, .review-template .review-wu-grade { width: 100% !important; border-bottom: none !important; border-top: 1px solid #ddd !important; }
+		#content-wrapper .latest-small-article { width: 100% !important; border-right: none !important; }
+		#content-wrapper .latest-small-article .ls-metadata .ls-author { float: left !important; width: 100% !important; margin-bottom: 5px !important; }
+
+		/* Article Images and Captions */
+		#main-content article img {  height: auto !important; }
+		#main-content article dl.wp-caption, #main-content article .wp-caption, #main-content #player { width: 100% !important; }
+
+		header .main-header .main-menu ul { display: none !important; }
+		header .main-header .main-menu .main-dropdown { display: block !important; width: 96% !important; margin: 5px 2%;  padding: 9px !important; font-weight: bold !important; }
+		header .main-header .main-menu .main-dropdown option {  font-family: "Lato" !important;  }
+		header .main-header .main-menu .main-dropdown p { display: block !important; float: left !important; }
+
+		#review-categories { display: none !important; }
+		#main-page-featured #featured-boxes { max-height: 100% !important; }
+
+		#comments-section .comment .avatar { margin-bottom: 10px !important; }
+
+		#main-page-featured .featured-big canvas, #main-page-featured .featured-big span  { width: 70px !important; height: 70px !important; font-size: 21px !important;line-height: 3.4 !important;}
+		#main-page-featured .featured-big .percentage { top: -1px !important; left: -1px !important; width: 70px !important; height: 70px !important;}
+		#main-page-featured .featured-big .chart { border: 3px solid #fff !important; width: 74px; height: 74px !important;}
+
+		#main-page-featured .featured-small canvas, #main-page-featured .featured-small span  { width: 40px !important; height: 40px !important; line-height: 2.3 !important;}
+		#main-page-featured .featured-small .percentage { top: -1px !important; left: -1px !important; width: 40px !important; height: 40px !important;}
+		#main-page-featured .featured-small .chart { border: 3px solid #fff !important; width: 44px !important; height: 44px !important;}
+
+		#main-page-featured .featured-wide canvas, #main-page-featured .featured-wide span  { width: 40px !important; height: 40px !important; line-height: 2.3 !important; }
+		#main-page-featured .featured-wide .percentage { top: -1px !important; left: -1px !important; width: 40px !important; height: 40px !important;}
+		#main-page-featured .featured-wide .chart { border: 3px solid #fff !important; width: 44px !important; height: 44px !important;}
+
+		.cwp-popular-review .chart canvas, .cwp-popular-review .chart span  { width: 40px !important; height: 40px !important; line-height: 2.3 !important; }
+		.cwp-popular-review .chart .percentage { top: -1px !important; left: -1px !important; width: 40px !important; height: 40px !important;}
+		.cwp-popular-review .chart { border: 3px solid #fff !important; width: 44px !important; height: 44px !important; top: 50% !important; margin-top: -22px !important; }
+
+		.ls-article-inner .ls-date { float: left !important; margin-top: 5px !important; font-size: 12px !important; margin-bottom: 5px !important; }
+		.ls-article-inner .ls-author { float: left !important; margin-top: 5px !important; font-size: 12px !important; }
+		.latest-small-article { height: 100% !important; padding-bottom: 20px !important; }
+
+
+
+	}

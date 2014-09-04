@@ -89,7 +89,7 @@ function cwp_get_logo()
 		} else { 
 			$logo = cwp("cwp_logo");
 		}
-		return $logo;
+		echo $logo;
 	}
 
 
@@ -99,16 +99,25 @@ function cwp_get_logo()
 
 function cwp_get_ad_banner() 
 	{
+		$cwp_header_banner_bool = cwp("cwp_header_banner_bool");
 		$ad_banner = cwp("cwp_banner_image");
 		$ad_banner_text = cwp("cwp_header_banner_alt");
 		$ad_banner_link = cwp("cwp_header_banner_url");
-
-		if(cwp("cwp_header_banner_bool") == "yes")
+		
+		if(is_active_sidebar('banners-sidebar'))
 		{
-			if(!empty($ad_banner))
-				{
-					echo "<a href='{$ad_banner_link}'><img src='{$ad_banner}' alt='{$ad_banner_text}'/></a>";
-				}
+			dynamic_sidebar('banners-sidebar');
+		}
+		else if(!empty($cwp_header_banner_bool) && !empty($ad_banner) && !empty($ad_banner_text) && !empty($ad_banner_link))
+		{		
+			if( $cwp_header_banner_bool == "yes")
+			{
+				if(!empty($ad_banner))
+					{
+						echo "<a href='" . esc_url($ad_banner_link) . "'><img src='{$ad_banner}' alt='". esc_html($ad_banner_text) . "'/></a>";
+						
+					}
+			}
 		}
 	}
 
